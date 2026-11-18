@@ -30,11 +30,11 @@ From the repository root:
 ```bash
 python3 -m venv .venv-knn
 source .venv-knn/bin/activate
-python -m pip install -r KNN/requirements.txt
+python -m pip install -r PES2UG24CS074_KNN/requirements.txt
 python -m ipykernel install --user --name pathsnap-knn --display-name "PathSnap KNN"
 ```
 
-Open `KNN/02_knn_same_preprocessed_data.ipynb`, select the **PathSnap KNN** kernel, and choose **Run All**. The notebook looks for the data in this folder's `shared_data/`; it writes `artifacts/knn.joblib`, `results/knn_cv.json`, and `results/knn_results.json` beneath this folder when run.
+Open `PES2UG24CS074_KNN/02_knn_same_preprocessed_data.ipynb`, select the **PathSnap KNN** kernel, and choose **Run All**. The notebook looks for the data in this folder's `shared_data/`; it writes `artifacts/knn.joblib`, `results/knn_cv.json`, and `results/knn_results.json` beneath this folder when run.
 
 The full-data KNN validation and student-test inference take a few minutes. KNN is especially slower at prediction time because it searches stored training examples for each new candidate. The notebook scores in batches to limit temporary memory use.
 

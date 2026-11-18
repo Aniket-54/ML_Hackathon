@@ -27,11 +27,11 @@ From the repository root:
 ```bash
 python3 -m venv .venv-logreg
 source .venv-logreg/bin/activate
-python -m pip install -r LogisticRegression/requirements.txt
+python -m pip install -r PES2UG25CS810_LogisticRegression/requirements.txt
 python -m ipykernel install --user --name pathsnap-logreg --display-name "PathSnap Logistic Regression"
 ```
 
-Open `LogisticRegression/03_logistic_regression_same_preprocessed_data.ipynb`, select **PathSnap Logistic Regression**, then choose **Run All**. The notebook looks for the data in this folder's `shared_data/` or nearby PathSnap workspaces. It writes the fitted model and fresh metrics to `artifacts/` and `results/` beneath this folder.
+Open `PES2UG25CS810_LogisticRegression/03_logistic_regression_same_preprocessed_data.ipynb`, select **PathSnap Logistic Regression**, then choose **Run All**. The notebook looks for the data in this folder's `shared_data/` or nearby PathSnap workspaces. It writes the fitted model and fresh metrics to `artifacts/` and `results/` beneath this folder.
 
 ## Original full-data run
 
