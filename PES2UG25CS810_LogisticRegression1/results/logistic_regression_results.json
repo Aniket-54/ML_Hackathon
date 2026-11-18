@@ -1,0 +1,47 @@
+{
+  "model": "LogisticRegression",
+  "author": "PES2UG25CS810",
+  "algorithm_family": "Linear & Probabilistic (Logit Model)",
+  "parameters": {
+    "penalty": "l2",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 500,
+    "random_state": 42
+  },
+  "preprocessing": "StandardScaler (Zero-mean, unit-variance normalization)",
+  "metrics": {
+    "pointwise_top1_accuracy": "85.02%",
+    "macro_f1": 0.9224,
+    "log_loss": 0.0934,
+    "clean_trip_hmm_decoded_top1": "91.50%",
+    "clean_trip_hmm_route_continuity": "97.20%",
+    "overall_test_hmm_decoded_top1": "86.81%",
+    "overall_test_hmm_route_continuity": "97.74%",
+    "fit_seconds": 1.61,
+    "inference_seconds": 0.01
+  },
+  "learned_coefficients_top5": [
+    {
+      "feature": "spatial_emission_prob",
+      "coefficient": 1.842
+    },
+    {
+      "feature": "rank_by_dist",
+      "coefficient": -1.215
+    },
+    {
+      "feature": "cross_track_m",
+      "coefficient": -0.984
+    },
+    {
+      "feature": "heading_error_rad",
+      "coefficient": -0.672
+    },
+    {
+      "feature": "dist_gap_to_next",
+      "coefficient": 0.541
+    }
+  ],
+  "evaluation_note": "Evaluated on shared 18-feature dataset with StandardScaler. Calibrated sigmoid probabilities directly supply smooth emission likelihoods to the Viterbi HMM decoder."
+}
