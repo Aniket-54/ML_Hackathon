@@ -1,11 +1,15 @@
-# PathSnap Evaluator Interface (Laptop 2)
+# Evaluator Interface
 
-Evaluator-facing user interface for the PathSnap distributed two-laptop deployment.
+Streamlit application for selecting student-test trips and displaying the observed GPS track, reference route when available, and decoded route on a Folium map.
 
-## How to Run:
+## Start the interface
+
+In a separate terminal from the backend, from the repository root:
+
 ```bash
-pip install -r requirements.txt
+python -m pip install -r frontend/requirements.txt
+cd frontend
 streamlit run app.py
 ```
 
-In the sidebar, enter Laptop 1's backend API URL (e.g., `http://192.168.1.15:8000`), select any of the 10 evaluation trips from the dropdown, and click **Reconstruct Route**.
+Set the backend URL in the sidebar. Use `http://127.0.0.1:8000` for a same-machine run, or `http://<backend-host-ip>:8000` when the backend runs on another computer. The frontend host must be able to reach the backend on port 8000.

@@ -1,5 +1,5 @@
 """
-main.py - PathSnap Production Backend Server (FastAPI)
+main.py - PathSnap Backend API Server (FastAPI)
 Two-Laptop Deployment Architecture: Laptop 1 (Model and API Server)
 """
 
@@ -18,8 +18,9 @@ import lightgbm as lgb
 # Setup paths
 BACKEND_DIR = Path(__file__).resolve().parent
 REPO_DIR = BACKEND_DIR.parent
-BASE_DIR = REPO_DIR.parent
-STUDENT_FOLDER = BASE_DIR / "Student folder"
+STUDENT_FOLDER = REPO_DIR / "Student folder"
+if not STUDENT_FOLDER.exists() and (REPO_DIR.parent / "Student folder").exists():
+    STUDENT_FOLDER = REPO_DIR.parent / "Student folder"
 USER_DIR = REPO_DIR / "PES2UG24CS064_LightGBM"
 SHARED_DATA = REPO_DIR / "shared_data_v2"
 
@@ -102,7 +103,6 @@ def health():
         "status": "online",
         "service": "PathSnap Map-Matching & Route Reconstruction API",
         "model": "LightGBM + Multi-Hop Viterbi HMM",
-        "author": "PES2UG24CS064 (Aniket S Patil)",
         "available_trips_count": len(TRIPS_CACHE),
         "available_trips": list(TRIPS_CACHE.keys())
     }

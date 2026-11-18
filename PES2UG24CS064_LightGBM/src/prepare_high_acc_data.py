@@ -20,6 +20,8 @@ from scipy.spatial import cKDTree
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parents[1]
 DATA_ROOT = PROJECT_ROOT / "Student folder"
+if not DATA_ROOT.exists() and (PROJECT_ROOT.parent / "Student folder").exists():
+    DATA_ROOT = PROJECT_ROOT.parent / "Student folder"
 OUT_DIR = PROJECT_ROOT / "shared_data_v2"
 
 FEATURE_NAMES = [
