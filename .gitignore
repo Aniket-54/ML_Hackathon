@@ -24,6 +24,7 @@ Student folder/
 data/
 artifacts/
 shared_data/
+shared_data_v2/
 *.pkl
 *.joblib
 *.h5

@@ -1,0 +1,30 @@
+{
+  "model": "LGBMClassifier",
+  "author": "PES2UG24CS064",
+  "algorithm_family": "Gradient Boosting Decision Trees (LightGBM)",
+  "role": "Primary / Best Performing Model & Pipeline Architecture",
+  "parameters": {
+    "n_estimators": 200,
+    "learning_rate": 0.08,
+    "num_leaves": 45,
+    "max_depth": 7,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "random_state": 42,
+    "n_jobs": -1,
+    "verbose": -1
+  },
+  "features_count": 18,
+  "metrics": {
+    "pointwise_top1_accuracy": "86.43%",
+    "macro_f1": 0.9329,
+    "log_loss": 0.078,
+    "clean_trip_hmm_decoded_top1": "94.21%",
+    "clean_trip_hmm_route_continuity": "97.12%",
+    "overall_test_hmm_decoded_top1": "88.25%",
+    "overall_test_hmm_route_continuity": "97.12%",
+    "fit_seconds": 9.75,
+    "inference_seconds": 0.26
+  },
+  "evaluation_note": "Best performing model across all 5 candidate families. Combined with multi-hop Viterbi HMM decoder, achieves 94.21% continuous Top-1 route accuracy with 97.12% route continuity."
+}
