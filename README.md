@@ -1,3 +1,6 @@
 # ML_Hackathon
 
-PathSnap hackathon project files are organized by participant. The reproducible first-review bundle for PES2UG24CS102 is in [`PES2UG24CS102_RandomForest/`](PES2UG24CS102_RandomForest/README.md).
+PathSnap hackathon project files are organized by participant:
+
+- [PES2UG24CS102 Random Forest first-review bundle](PES2UG24CS102_RandomForest/README.md)
+- [PES2UG24CS102 KNN on the shared preprocessed data](PES2UG24CS102_KNN/README.md)
