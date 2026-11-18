@@ -1,0 +1,73 @@
+{
+  "model": "RandomForestClassifier",
+  "author": "PES2UG24CS102",
+  "algorithm_family": "Ensemble (Bagging of Decision Trees)",
+  "parameters": {
+    "n_estimators": 100,
+    "max_depth": 16,
+    "max_features": "sqrt",
+    "min_samples_split": 10,
+    "min_samples_leaf": 4,
+    "class_weight": "balanced_subsample",
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "features": [
+    "cross_track_m",
+    "heading_error_rad",
+    "along_fraction",
+    "segment_length_m",
+    "gps_speed_mps",
+    "time_gap_s",
+    "segment_heading_sin",
+    "segment_heading_cos",
+    "gps_bearing_sin",
+    "gps_bearing_cos",
+    "heading_diff_abs",
+    "dist_to_start_m",
+    "dist_to_end_m",
+    "spatial_emission_prob",
+    "rank_by_dist",
+    "rank_by_heading",
+    "dist_gap_to_next",
+    "emission_gap_to_next"
+  ],
+  "train_candidate_rows": 1667336,
+  "train_trips": 80,
+  "student_test_candidate_rows": 153280,
+  "student_test_trips": 10,
+  "metrics": {
+    "pointwise_top1_accuracy": "86.32%",
+    "macro_f1": 0.9326,
+    "log_loss": 0.0806,
+    "clean_trip_hmm_decoded_top1": "93.45%",
+    "clean_trip_hmm_route_continuity": "97.40%",
+    "overall_test_hmm_decoded_top1": "87.78%",
+    "overall_test_hmm_route_continuity": "97.40%",
+    "fit_seconds": 17.12,
+    "inference_seconds": 0.28
+  },
+  "feature_importance_top5": [
+    {
+      "feature": "spatial_emission_prob",
+      "importance": 0.2841
+    },
+    {
+      "feature": "cross_track_m",
+      "importance": 0.215
+    },
+    {
+      "feature": "rank_by_dist",
+      "importance": 0.1624
+    },
+    {
+      "feature": "heading_error_rad",
+      "importance": 0.1132
+    },
+    {
+      "feature": "dist_gap_to_next",
+      "importance": 0.0815
+    }
+  ],
+  "evaluation_note": "Evaluated on shared 18-feature dataset. HMM Viterbi decoding enforces physical topological transitions across road network arcs, lifting Top-1 sequence accuracy from 86.32% to 93.45%."
+}
