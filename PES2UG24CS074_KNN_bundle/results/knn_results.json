@@ -1,0 +1,26 @@
+{
+  "model": "KNeighborsClassifier",
+  "author": "PES2UG24CS074",
+  "algorithm_family": "Instance-based (Non-parametric Nearest Neighbors)",
+  "parameters": {
+    "n_neighbors": 15,
+    "weights": "distance",
+    "metric": "euclidean",
+    "algorithm": "kd_tree",
+    "leaf_size": 40,
+    "n_jobs": -1
+  },
+  "preprocessing": "StandardScaler (Zero-mean, unit-variance normalization)",
+  "metrics": {
+    "pointwise_top1_accuracy": "84.73%",
+    "macro_f1": 0.9205,
+    "log_loss": 0.138,
+    "clean_trip_hmm_decoded_top1": "91.80%",
+    "clean_trip_hmm_route_continuity": "97.04%",
+    "overall_test_hmm_decoded_top1": "87.39%",
+    "overall_test_hmm_route_continuity": "97.04%",
+    "fit_seconds": 0.01,
+    "inference_seconds": 6.48
+  },
+  "evaluation_note": "Evaluated on shared 18-feature dataset with StandardScaler. HMM Viterbi decoding lifts sequence accuracy to 91.80%."
+}
