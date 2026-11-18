@@ -3,4 +3,4 @@
 PathSnap hackathon project files are organized by participant:
 
 - [PES2UG24CS102 Random Forest first-review bundle](PES2UG24CS102_RandomForest/README.md)
-- [PES2UG24CS102 KNN on the shared preprocessed data](PES2UG24CS102_KNN/README.md)
+- [KNN on the shared preprocessed data](KNN/README.md)
