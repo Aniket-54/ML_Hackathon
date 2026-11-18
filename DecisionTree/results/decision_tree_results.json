@@ -1,0 +1,22 @@
+{
+  "model": "DecisionTreeClassifier",
+  "algorithm_family": "Tree-based (CART Baseline)",
+  "parameters": {
+    "max_depth": 12,
+    "min_samples_split": 20,
+    "min_samples_leaf": 10,
+    "random_state": 42
+  },
+  "metrics": {
+    "pointwise_top1_accuracy": "85.26%",
+    "macro_f1": 0.9267,
+    "log_loss": 0.1185,
+    "clean_trip_hmm_decoded_top1": "92.10%",
+    "clean_trip_hmm_route_continuity": "96.20%",
+    "overall_test_hmm_decoded_top1": "87.28%",
+    "overall_test_hmm_route_continuity": "96.20%",
+    "fit_seconds": 12.31,
+    "inference_seconds": 0.03
+  },
+  "evaluation_note": "Single CART decision tree baseline on shared 18-feature dataset. Serves as baseline comparison against ensemble methods (Random Forest and LightGBM)."
+}
