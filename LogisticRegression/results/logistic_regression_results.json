@@ -1,0 +1,34 @@
+{
+  "model": "LogisticRegression",
+  "parameters": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "max_iter": 250,
+    "solver": "lbfgs"
+  },
+  "features": [
+    "cross_track_m",
+    "heading_error_rad",
+    "along_fraction",
+    "segment_length_m",
+    "gps_speed_mps",
+    "time_gap_s"
+  ],
+  "train_candidate_rows": 1145304,
+  "train_gps_points": 49664,
+  "train_candidate_miss_rate": 0.03912290592783505,
+  "student_test_candidate_rows": 450648,
+  "student_test_gps_points": 19160,
+  "student_test_covered_points": 18777,
+  "student_test_candidate_miss_rate": 0.01998956158663883,
+  "grouped_5fold_cv_observation_top1_mean": 0.707689654522902,
+  "grouped_5fold_cv_observation_top1_std": 0.02841920059265555,
+  "grouped_5fold_cv_candidate_macro_f1_mean": 0.6572791826787406,
+  "student_test_observation_top1": 0.7095382648985461,
+  "student_test_candidate_macro_f1_at_0.5": 0.6628869272729203,
+  "student_test_candidate_log_loss": 0.26514628529548645,
+  "final_fit_seconds": 2.552894477001246,
+  "student_test_inference_seconds": 0.033391788998414995,
+  "artifact": "artifacts/logistic_regression.joblib",
+  "evaluation_note": "Top-1 is conditional on a positive reference candidate being generated. Labels are pointwise geometric pseudo-labels; these are candidate-ranking results, not sequence-level route accuracy."
+}
