@@ -1,0 +1,38 @@
+# Environments
+.venv/
+venv/
+env/
+ENV/
+*.env
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter / IDE
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# Data & Artifacts
+Student folder/
+data/
+artifacts/
+shared_data/
+*.pkl
+*.joblib
+*.h5
+*.onnx
+*.parquet
+*.feather
+*.csv.gz
+*.npz
+
+# OS files
+.DS_Store
+Thumbs.db
